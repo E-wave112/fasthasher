@@ -5,6 +5,7 @@ import hashlib
 app = FastAPI()
 
 @app.get('/')
+##function to hash a password
 async def root(password):
     ##specify constraints
     if len(password) < 6:
@@ -14,6 +15,7 @@ async def root(password):
 
 ##route for generating strong passwords
 @app.get('/generate')
+##function to gewnerate a strong passowrd
 async def generate():
     pass_list = [random.randint(65,90), random.randint(65,90), random.randint(65,90),random.randint(97,122),
         random.randint(65,90), random.randint(65,90), random.randint(65,90),random.randint(97,122),
