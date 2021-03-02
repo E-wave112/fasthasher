@@ -35,9 +35,9 @@ async def root(password):
 @app.get('/generate',tags=['generate'])
 ##function to gewnerate a strong passowrd
 async def generate():
-    pass_list = [random.randint(65,90), random.randint(65,90), random.randint(65,90),random.randint(97,122),
-        random.randint(65,90), random.randint(65,90), random.randint(65,90),random.randint(97,122),
-        random.randint(65,90),random.randint(65,90),random.randint(97,122),random.randint(65,122)]
+    pass_list = [random.randint(65,122), random.randint(65,90), random.randint(65,122),random.randint(97,122),
+        random.randint(65,90), random.randint(65,122), random.randint(65,90),random.randint(97,122),
+        random.randint(65,122),random.randint(65,122),random.randint(97,122),random.randint(65,122)]
     return {"generated_password":''.join([chr(i) for i in pass_list])}
     
     
