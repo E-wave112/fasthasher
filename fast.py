@@ -33,7 +33,7 @@ async def root(password):
 
 ##route for generating strong passwords
 @app.get('/generate',tags=['generate'])
-##function to gewnerate a strong passowrd
+##function to generate a strong passowrd
 async def generate():
     pass_list = [random.randint(65,122), random.randint(65,90), random.randint(65,122),random.randint(97,122),
         random.randint(65,90), random.randint(65,122), random.randint(65,90),random.randint(97,122),
